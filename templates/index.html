@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Weather App</title>
-
+    <title>Weather App — By IP Location</title>
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
+    <div class="bg-gradient"></div>
     <main class="container">
-
-        <header>
-            <h1>My Weather</h1>
-            <p id="location">Loading location...</p>
+        <header class="header">
+            <h1 class="app-title">🌤️ Weather Forecast</h1>
+            <p id="location" class="location-text">Detecting your location...</p>
         </header>
 
         <section class="current-weather">
-
-            <div>
-                <p class="label">Temperature</p>
-                <h2 id="temperature">--°C</h2>
+            <div class="weather-card main-card">
+                <p class="label">Current Temperature</p>
+                <h2 id="temperature" class="temp-value">--°C</h2>
+                <p id="weather-desc" class="weather-desc">Loading conditions...</p>
             </div>
-
-            <div>
-                <p class="label">Feels like</p>
-                <p id="feels">--°C</p>
+            <div class="weather-card">
+                <p class="label">Feels Like</p>
+                <p id="feels" class="card-value">--°C</p>
             </div>
-
-            <div>
+            <div class="weather-card">
                 <p class="label">Humidity</p>
-                <p id="humidity">--%</p>
+                <p id="humidity" class="card-value">--%</p>
             </div>
-
-            <div>
-                <p class="label">Wind</p>
-                <p id="wind">-- km/h</p>
+            <div class="weather-card">
+                <p class="label">Wind Speed</p>
+                <p id="wind" class="card-value">-- km/h</p>
             </div>
-
         </section>
 
-        <section>
-            <h2>5 Day Forecast</h2>
-
+        <section class="forecast-section">
+            <h2 class="section-title">📅 5-Day Forecast</h2>
             <div id="forecast" class="forecast">
-                <!-- JavaScript creates the cards -->
+                <!-- Forecast cards from JS -->
             </div>
         </section>
 
-        <footer>
-            <p id="ip"></p>
+        <footer class="footer">
+            <p id="ip" class="ip-text">Public IP: ---</p>
+            <p class="credit">Powered by Open-Meteo • Location detected from IP</p>
         </footer>
-
     </main>
 
     <script src="/static/script.js"></script>
-
 </body>
 </html>
