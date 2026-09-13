@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Weather App</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>My Weather</h1>
+            <p id="location">Loading location...</p>
+        </header>
+
+        <section class="current-weather">
+
+            <div>
+                <p class="label">Temperature</p>
+                <h2 id="temperature">--°C</h2>
+            </div>
+
+            <div>
+                <p class="label">Feels like</p>
+                <p id="feels">--°C</p>
+            </div>
+
+            <div>
+                <p class="label">Humidity</p>
+                <p id="humidity">--%</p>
+            </div>
+
+            <div>
+                <p class="label">Wind</p>
+                <p id="wind">-- km/h</p>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>5 Day Forecast</h2>
+
+            <div id="forecast" class="forecast">
+                <!-- JavaScript creates the cards -->
+            </div>
+        </section>
+
+        <footer>
+            <p id="ip"></p>
+        </footer>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
